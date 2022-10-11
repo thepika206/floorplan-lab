@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: white;
 }
 
 .App {
@@ -69,7 +69,7 @@ body {
 div {
   border: 1px solid grey;
   /* margin: 5px; */
-  padding: 5px;
+  /* padding: 5px; */
 }
 
 div#floor-plan{
@@ -87,7 +87,7 @@ div#floor-plan{
 }
 
 #bath-Full{
-  background-color: green;
+  background-color: lightgreen;
   grid-area: bath-Full
 }
 
@@ -101,11 +101,11 @@ div#floor-plan{
   grid-area: bedroom-1;
 }
 #bedroom-2{
-  background-color: blue;
+  background-color: lightblue;
   grid-area: bedroom-2;
 }
 #bedroom-3{
-  background-color: royalblue;
+  background-color: lightblue;
   grid-area: bedroom-3;
 }
 
@@ -117,4 +117,21 @@ div#floor-plan{
 #kitchen {
   background-color: orange;
   grid-area: kitchen
+}
+
+#oven{
+  background-color: brown;
+  width: 50%;
+}
+#sink{
+  background-color: salmon;
+  width: 50%;
+}
+
+#kitchen > div {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  height: 15%;
 }
