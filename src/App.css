@@ -1,3 +1,29 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+/* Use a system font, if none are available use an available sans-sarif   font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+}
+
 .App {
   text-align: center;
 }
@@ -15,13 +41,14 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
+  /* color: white; */
 }
 
 .App-link {
@@ -37,8 +64,57 @@
   }
 }
 
+
+
 div {
   border: 1px solid grey;
-  margin: 5px;
+  /* margin: 5px; */
   padding: 5px;
+}
+
+div#floor-plan{
+  height: 90vh;
+  min-width: 90vw;  
+  border: 1px solid black;
+  display: grid;
+  grid-template-rows: 4fr 2fr 4fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'bedroom-1 livingroom livingroom kitchen'
+    'bath-Full livingroom livingroom kitchen'
+    'bedroom-2 bath-Half bedroom-3 bedroom-3'
+  
+}
+
+#bath-Full{
+  background-color: green;
+  grid-area: bath-Full
+}
+
+#bath-Half{
+  background-color: lightgreen;
+  grid-area: bath-Half
+}
+
+#bedroom-1{
+  background-color: lightblue;
+  grid-area: bedroom-1;
+}
+#bedroom-2{
+  background-color: blue;
+  grid-area: bedroom-2;
+}
+#bedroom-3{
+  background-color: royalblue;
+  grid-area: bedroom-3;
+}
+
+#livingroom{
+  background-color: tan;
+  grid-area: livingroom
+}
+
+#kitchen {
+  background-color: orange;
+  grid-area: kitchen
 }
